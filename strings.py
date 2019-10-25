@@ -1,4 +1,4 @@
-//Indexing and slicing
+//Indexing and slicing { This same concept can be used for strings, lists, tuples, dist }
 
 my_string = 'abcdefg'
 print(mystring[1])    //b
