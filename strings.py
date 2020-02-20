@@ -53,9 +53,45 @@ print(mystring[::-1])    //gfedcba    Note:Interview question: Reverse the strin
   compare to lists these are immutables- values inside the brackets/tuples cann't changed using indexing, uses curly brackets
   my_list = [1,2,3,4]
   my_list[2] = "abc"    //[1,2, "abc", 4]
+
+//sets
+#un-oder collection of unique elements, avoid repeative unique number inside it
+my_set = set()
+my_set.add(1)
+my_set.add(1)
+my_set.add(1)
+print my_set     #output gives set([1]) means avoid repetative elements
+
+my_list = [1,1,2,2,3,3,3,4,4,4,5,5,5]
+print set(my_list) #output [1,2,3,4,5]
   
   my_tuple = (1,2,3,4)
   my_tuple[2] = "abc"    //error 
   
+  //Boolens 
+    # Booleans are operators that allow u to convey True or False statements, usually used to deal with control flow and logic
+
+    
+  //file I/O
+myfile = open('/home/darshan_k_t/skillup/python/dar.txt')
+contents = myfile.read()
+print contents
+# print myfile.read()
+print myfile.seek(0)    #reset file cursor location
+print myfile.readline()
+
+with open("/home/darshan_k_t/skillup/python/dar.txt") as my_new_file:    #change file name
+    content = my_new_file.read()
+    print content
+    
+with open('/home/darshan_k_t/skillup/python/my_new_file', mode='a') as f:  
+    f.write("\n Add BOSS is back!")  #added new line
+   
+with open('/home/darshan_k_t/skillup/python/my_new_file', mode='r') as f:    
+    print (f.read())   # reading the added file
   
-  
+#write a script to open file, write something and close it
+y = open("test.txt", 'w')
+y.write("Hello World")
+y.close()
+
