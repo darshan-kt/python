@@ -20,3 +20,8 @@ with open('my_text.txt') as myfile:
  with open('my_text.txt', mode= a) as myfile:
   a = myfile.write('/nAdd this new line')
   print(a)
+  
+  # Script to create text file and write data into it and close the txt file
+  y = open("test.txt", 'w')
+  y.write("Hello World")
+  y.close()
