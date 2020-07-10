@@ -46,7 +46,7 @@ print(mystring[::-1])    //gfedcba    Note:Interview question: Reverse the strin
   
   //distinaries
   key-value pair mechanism with flower brackets
-  my_dist={'apple':'red', 'ball':'360'}
+  my_dist={'apple':red, 'ball':360}
   my_dist[apple]             //red
   
   //Tuples
