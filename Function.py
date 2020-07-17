@@ -67,4 +67,22 @@ def fun():
     x = 200
     print("Value of x is ', x)
     return x   #return x =200
-    
+   
+#Find upper and lower case letter in the given string	  
+s = 'Hi Boss How Are You!'
+countUP = 0
+countLW = 0
+def up_low(s):
+
+    for letter in s:
+        if letter.isupper():
+            global countUP
+            countUP = countUP + 1
+            # print(countUP)
+        else:
+            global countLW 
+            countLW = countLW + 1
+            # print(countLW)
+    return countUP, countLW
+
+print(up_low(s))  # 5,15
