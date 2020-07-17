@@ -70,19 +70,59 @@ def fun():
    
 #Find upper and lower case letter in the given string	  
 s = 'Hi Boss How Are You!'
-countUP = 0
-countLW = 0
 def up_low(s):
-
+    countUP = 0
+    countLW = 0
     for letter in s:
         if letter.isupper():
-            global countUP
             countUP = countUP + 1
             # print(countUP)
-        else:
-            global countLW 
+        elif letter.islower():
             countLW = countLW + 1
             # print(countLW)
+        else:
+            pass
     return countUP, countLW
+	  
+	  #(or) By using Dictionary approach
+	  
+def up_low(s):
+    d = {'countUP':0, 'countLW':0}
+    for letter in s:
+        if letter.isupper():
+            d['countUP'] += 1
+            # print(countUP)
+        elif letter.islower():
+            d['countLW'] += 1
+            # print(countLW)
+        else:
+            pass
+    return d['countUP'], d['countLW']
 
-print(up_low(s))  # 5,15
+print(up_low(s))  # 5,10
+
+#Check the given number with in the range or not
+def check_range(num, low_range, high_range):
+	if num in range(low_range, high_range+1):
+	  print(Yes num is within the given range)
+	 else:
+	  print(No num is within the given range)
+	return num
+print(check_range(5,2,7)) #Yes num(5) is within the given range
+print(check_range(10,2,7)) #No num(10) is within the given range
+	  
+	  
+#Check pallidrome or not
+s = 'nurses run'
+def palindrome(s):
+    #remove spaces in String
+    s = s.replace(' ','')
+    print(s)
+    # Check sting is == reverse version of the string
+    if s == s[::-1]:
+        print(palindrome)
+    else:
+        print("Not a palindrome")
+
+print(palindrome(s))	
+	  
