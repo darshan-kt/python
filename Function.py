@@ -24,3 +24,47 @@ a = myfunc('abcdefg')
 print(a)
 
 ## AbCdEfG
+
+def spy_game(nums):
+	code = []
+	for num in nums:
+		if num == 0:
+			code.append(0)
+		elif num == 7:
+			code.append(7)
+			print(code)
+			break
+
+	return code == [0,0,7]
+
+print(spy_game([1,2,3,0,0,7,9,7]))
+
+'''
+# LEGB Rule for checking the variable 
+Local : First check within the local function to if any variables or defined or not
+Enclosing Bracket: Then it checks the variable defined with the enclosing bracket space defined in the function.
+Global : Finally it checks for variable defined at the top level or at the begining of code.
+Built-in : If variable not defined in all the cases it check its an in built variable(len,sum..) or not.
+'''
+
+#Global Varibale
+num = 'Global String'
+def great():
+    #Enclosing Varibale
+    num = 'Enclosing String'
+    def hello():
+        #Local Varibale
+        num = 'local String'
+    return num
+print(great())  #This print 'local string', if comment that then it check for enclosing and print 'Enclosing String', if u again comment that final it looks at global varible and prints 'Global String' 
+
+
+x = 5
+def fun():
+    global x   # Goto global declaration space and grab value of x
+    print('Initial x value is ', x)
+    #locla assignment
+    x = 200
+    print("Value of x is ', x)
+    return x   #return x =200
+    
